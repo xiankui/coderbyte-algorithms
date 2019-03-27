@@ -8,5 +8,9 @@
   "oddball-sum": "Oddball sum",
   "stock-maximum-profit": "Stock maximum profit",
   "simple-clock-angle": "Simple clock angle",
-  "determine-overlapping-numbers-in-ranges": "Determine overlapping numbers in ranges"
+  "determine-overlapping-numbers-in-ranges": "Determine overlapping numbers in ranges",
+  "test-divisors-of-three": "Test divisors of three",
+  "sum-of-several-arrays": "Sum of several arrays",
+  "step-by-step-solution-step-walking-using-recursion": "Step-by-step solution for step counting using recursion",
+  "3-common-javascript-closure-questions": "3 common JavaScript closure questions"
 }
