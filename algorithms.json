@@ -13,5 +13,6 @@
   "sum-of-several-arrays": "Sum of several arrays",
   "step-by-step-solution-step-walking-using-recursion": "Step-by-step solution for step counting using recursion",
   "3-common-javascript-closure-questions": "3 common JavaScript closure questions",
-  "lucky-sevens": "Lucky sevens"
+  "lucky-sevens": "Lucky sevens",
+  "find-minimum-spanning-tree-using-prims-algorithm": "Find the minimum spanning tree using Prim's algorithm"
 }
