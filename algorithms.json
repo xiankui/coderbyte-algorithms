@@ -14,5 +14,10 @@
   "step-by-step-solution-step-walking-using-recursion": "Step-by-step solution for step counting using recursion",
   "3-common-javascript-closure-questions": "3 common JavaScript closure questions",
   "lucky-sevens": "Lucky sevens",
-  "find-minimum-spanning-tree-using-prims-algorithm": "Find the minimum spanning tree using Prim's algorithm"
+  "find-minimum-spanning-tree-using-prims-algorithm": "Find the minimum spanning tree using Prim's algorithm",
+  "implement-pow-a-b-without-multiplication-division": "Implement pow(a,b) without multiplication or division",
+  "implement-queue-using-two-stacks": "Implement a queue using two stacks",
+  "implement-a-queue-using-linked-list": "Implement a queue using a linked list",
+  "implement-bubble-sort": "Implement bubble sort",
+  "merge-two-sorted-linked-lists": "Merge two sorted linked lists"
 }
