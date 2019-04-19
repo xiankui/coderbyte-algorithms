@@ -1,3 +1,45 @@
+/**
+ * Js for page
+ * @1. load algorithm list from algorithms.json
+ * @2. render algorithm by selected, change hash and reload page for pre-code prettify
+ * @3. run-btn to run the script to get the result
+ * @4. copy to clipboard
+ * @5. menu drawer for algorithms navigation
+ */
+
+// global
+const APP = {
+  algorithms: {}
+};
+
+// menu drawer
+const $menuDrawer = document.querySelector('.menu-drawer');
+const $fold = $menuDrawer.querySelector('.icon-fold');
+const $unfold = $menuDrawer.querySelector('.icon-unfold');
+const $overlay = document.querySelector('.overlay');
+
+function fold() {
+  $fold.classList.remove('hidden');
+  $unfold.classList.add('hidden');
+  $menuDrawer.classList.remove('unfold');
+  $menuDrawer.classList.add('fold');
+
+  $overlay.classList.add('hidden');
+}
+
+function unfold() {
+  $fold.classList.add('hidden');
+  $unfold.classList.remove('hidden');
+  $menuDrawer.classList.remove('fold');
+  $menuDrawer.classList.add('unfold');
+
+  $overlay.classList.remove('hidden');
+}
+
+$fold.addEventListener('click', unfold);
+$unfold.addEventListener('click', fold);
+
+
 // algorithm pre code load once
 let PRECODE = '';
 const codeFlag = '// hidden runtime response';
@@ -16,6 +58,13 @@ function renderText(text) {
     0,
     hiddenRuntimeRes
   )}`;
+}
+
+function renderTitle(key) {
+  const title = APP.algorithms[key];
+  if (title) {
+    document.getElementById('title').innerHTML = title;
+  }
 }
 
 function renderRuntimeRes(res) {
@@ -50,6 +99,12 @@ function renderAlgorithmsList() {
   fetch(url)
     .then(res => res.json())
     .then(data => {
+      // cache data
+      APP.algorithms = data;
+      if (hash) {
+        renderTitle(hash)
+      }
+
       const list = Object.keys(data).map(
         item =>
           `<li><a href="#${item}" class="${

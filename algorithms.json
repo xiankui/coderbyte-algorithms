@@ -19,5 +19,6 @@
   "implement-queue-using-two-stacks": "Implement a queue using two stacks",
   "implement-a-queue-using-linked-list": "Implement a queue using a linked list",
   "implement-bubble-sort": "Implement bubble sort",
-  "merge-two-sorted-linked-lists": "Merge two sorted linked lists"
+  "merge-two-sorted-linked-lists": "Merge two sorted linked lists",
+  "dutch-national-flag-sorting-problem": "Dutch national flag sorting problem"
 }

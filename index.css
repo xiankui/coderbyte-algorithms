@@ -1,9 +1,63 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: rgb(30, 34, 39);
   color: #fff;
 }
+h1 {
+  padding: 20px 60px;
+  margin: 0;
+  text-align: center;
+}
 .hidden {
   display: none !important;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  opacity: 1;
+  transition: all linear .5s;
+}
+.overlay.hidden {
+  opacity: 0;
+}
+.icon {
+  font-size: 36px;
+  color: #fff;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  transform: translateX(100%);
+  transition: all linear .5s;
+}
+.menu-drawer {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  padding: 0 10px;
+  background-color: #fff;
+  transition: all ease-in-out 0.5s;
+  z-index: 999;
+}
+.menu-drawer.fold {
+  transform: translateX(-100%);
+}
+.menu-drawer.unfold {
+  transform: translateX(0);
+}
+.menu-drawer.unfold .icon {
+  right: 0;
+}
+#algorithms-list {
+  list-style: none;
+  padding: 0;
 }
 #algorithms-list li a {
   font-size: 18px;
@@ -13,19 +67,19 @@ body {
   text-decoration: none;
 }
 #algorithms-list li a.selected {
-  color: lightyellow;
-  border-bottom-color: lightyellow;
+  color: green;
+  border-bottom-color: green;
 }
 .code-container {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  margin: 20px;
+  padding: 20px;
   font-size: 14px;
   position: relative;
 }
 .code-container .copy-text {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 40px;
+  top: 40px;
 }
 #run-btn {
   display: block;
@@ -67,6 +121,7 @@ pre.prettyprint {
   display: block;
   background-color: #333;
   padding: 20px;
+  margin: 0;
 }
 pre .nocode {
   background-color: none;
